@@ -1,4 +1,5 @@
 function Card({ title, description, image }) {
+
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
       {image && <img src={image} alt={title} className="w-full h-60 object-cover" />}
