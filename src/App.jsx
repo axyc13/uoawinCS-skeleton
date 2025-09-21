@@ -10,7 +10,7 @@ import Stats from './pages/Stats'
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="bg-[#F4EEE7] flex flex-col min-h-screen">
       <Navbar />
 
       <Routes>
@@ -20,8 +20,6 @@ function App() {
         <Route path="/mood-entry" element={<MoodEntry />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
-
-      <Footer />
     </div>
   );
 }

@@ -36,6 +36,7 @@ function MoodEntry() {
 
   return (
     <section className="bg-[#F4EEE7] py-20">
+      <h1 className = "text-[3em] flex justify-center">How Are You Feeling Today?</h1>
       {/* Mood buttons */}
       <div className="flex justify-center container mx-auto px-6 py-12 space-x-5">
         {moods.map((mood) => (
@@ -44,7 +45,7 @@ function MoodEntry() {
           </AddMoodButton>
         ))}
       </div>
-
+      <h1 className = "text-[3em] flex justify-center">Past Emotions</h1>
       {/* Mood cards */}
       <main className="flex-grow container mx-auto px-6 py-12">
         <MoodCard moods={moodEntries} />

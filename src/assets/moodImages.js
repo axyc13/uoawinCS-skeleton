@@ -1,8 +1,8 @@
-import bad from "./bad.png";
-import good from "./good.png";
-import neutral from "./neutral.png";
-import veryBad from "./veryBad.png";
-import veryGood from "./veryGood.png";
+import bad from "./bFlower.png";
+import good from "./gFlower.png";
+import neutral from "./nFlower.png";
+import veryBad from "./vbFlower.png";
+import veryGood from "./vgFlower.png";
 
 export const moodImages = {
   "Very Bad": veryBad,
