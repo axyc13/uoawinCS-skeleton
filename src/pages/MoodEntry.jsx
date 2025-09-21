@@ -46,7 +46,7 @@ function MoodEntry() {
       </div>
 
       {/* Mood cards */}
-      <main className="flex-grow container mx-auto px-6 py-12 grid gap-6 md:grid-cols-3">
+      <main className="flex-grow container mx-auto px-6 py-12">
         <MoodCard moods={moodEntries} />
       </main>
 
