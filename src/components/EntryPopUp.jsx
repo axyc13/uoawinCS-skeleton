@@ -33,26 +33,26 @@ export default function ButtonPopUp({ moodType }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
-      <input
-        name="title"
-        value={form.title}
-        onChange={handleChange}
-        placeholder="Title"
-        className="border px-2 py-1 rounded"
-        required
-      />
-      <input
-        name="description"
-        value={form.description}
-        onChange={handleChange}
-        placeholder="Description"
-        className="border px-2 py-1 rounded"
-        required
-      />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-        Add Mood
-      </button>
-    </form>
+      <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
+        <input
+          name="title"
+          value={form.title}
+          onChange={handleChange}
+          placeholder="Title"
+          className="border px-2 py-1 rounded"
+          required
+        />
+        <input
+          name="description"
+          value={form.description}
+          onChange={handleChange}
+          placeholder="Description"
+          className="border px-2 py-1 rounded"
+          required
+        />
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+          Add Mood
+        </button>
+      </form>
   );
 }

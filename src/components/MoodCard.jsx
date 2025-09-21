@@ -17,7 +17,7 @@ export default function MoodCard() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 gap-4">
+    <div className="grid grid-cols-3 gap-4">
       {moods.map((item, idx) => (
         <Card
           key={idx}
