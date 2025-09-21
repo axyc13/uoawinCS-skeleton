@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { moodImages } from "../assets/moodImages";
 
-export default function ButtonPopUp() {
+export default function ButtonPopUp({ moodType }) {
   const [form, setForm] = useState({
     title: "",
     description: "",
     image: ""
   });
+  
+  useEffect(() => {
+    if (moodType) {
+      setForm((prev) => ({
+        ...prev,
+        image: moodImages[moodType] || ""
+      }));
+    }
+  }, [moodType]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -19,7 +29,6 @@ export default function ButtonPopUp() {
       body: JSON.stringify(form)
     });
     setForm({ title: "", description: "", image: "" });
-    // Optionally, trigger a refresh in MoodCard (see below)
     window.dispatchEvent(new Event("moodAdded"));
   };
 
@@ -40,13 +49,6 @@ export default function ButtonPopUp() {
         placeholder="Description"
         className="border px-2 py-1 rounded"
         required
-      />
-      <input
-        name="image"
-        value={form.image}
-        onChange={handleChange}
-        placeholder="Image URL"
-        className="border px-2 py-1 rounded"
       />
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
         Add Mood
