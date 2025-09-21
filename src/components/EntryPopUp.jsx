@@ -5,14 +5,16 @@ export default function ButtonPopUp({ moodType }) {
   const [form, setForm] = useState({
     title: "",
     description: "",
-    image: ""
+    image: "",
+    mood: ""
   });
   
   useEffect(() => {
     if (moodType) {
       setForm((prev) => ({
         ...prev,
-        image: moodImages[moodType] || ""
+        image: moodImages[moodType] || "",
+        mood: moodType
       }));
     }
   }, [moodType]);
@@ -28,7 +30,7 @@ export default function ButtonPopUp({ moodType }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
     });
-    setForm({ title: "", description: "", image: "" });
+    setForm({ title: "", description: ""});
     window.dispatchEvent(new Event("moodAdded"));
   };
 

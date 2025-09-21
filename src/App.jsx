@@ -6,6 +6,7 @@ import About from './pages/About'
 import Home from './pages/Home'
 import Resources from './pages/Resources'
 import MoodEntry from './pages/MoodEntry'
+import Stats from './pages/Stats'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/mood-entry" element={<MoodEntry />} />
+        <Route path="/stats" element={<Stats />} />
       </Routes>
 
       <Footer />
