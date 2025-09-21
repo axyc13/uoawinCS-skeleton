@@ -35,7 +35,7 @@ function MoodEntry() {
   }, [moodEntries]);
 
   return (
-    <section className="bg-[#F4EEE7] py-20">
+    <section className="py-20">
       <h1 className = "text-[3em] flex justify-center">How Are You Feeling Today?</h1>
       {/* Mood buttons */}
       <div className="flex justify-center container mx-auto px-6 py-12 space-x-5">
